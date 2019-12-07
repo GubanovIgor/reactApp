@@ -1,8 +1,11 @@
 const express = require('express');
 const path = require('path');
+const mongoose = require('mongoose');
 const logger = require('morgan');
 const indexRouter = require('./routes/index');
 const port = 3001;
+
+mongoose.connect('mongodb://localhost:27017/todo', {useNewUrlParser: true})
 
 const app = express();
 
